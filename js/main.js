@@ -2,8 +2,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
     let lastChecked;
+
     function handleCheck(e) {
-        let betweenChecked;
+        let betweenChecked = false;
         if (e.shiftKey && this.checked) {
             console.log(e);
 
@@ -12,7 +13,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 if (checkbox === this || checkbox === lastChecked) {
                     betweenChecked = !betweenChecked;
-                    console.log('checking')
+                    console.log('checking');
+                }
+
+                if (betweenChecked) {
+                    checkbox.checked = true;
                 }
             });
         }
