@@ -1,3 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: purple;
+    display: flex;
+    justify-content: center;
+}
+
+.inbox {
+    width: 15vw;
+    max-width:400px;
+    margin:50px auto;
+    background-color: pink;
+    border-radius:5px;
+    box-shadow:10px 10px 0 rgba(0,0,0,0.1);
+}
+
+.item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #F1F1F1;
+}
+
 input:checked + p {
-    background: yellow;
+    background: lightgrey;
+    width: 15vw;
+}
+
+input[type="checkbox"] {
+    margin: 10px;
 }
